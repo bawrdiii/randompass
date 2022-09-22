@@ -3,7 +3,7 @@ import { useState } from "react"
 
 export const Generator = () => {
 
-    const [num, setNum] = useState('')
+    const [num, setNum] = useState("")
     const [result, setResult] = useState('')
 
     const inpOnChange = (e) => {
@@ -27,7 +27,7 @@ export const Generator = () => {
             }
         })
     }
-    const allCharacter = '0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCEDFGHIJKLMNOPQRSTUVWXYZ'
+    const allCharacter = '0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCEDFGHIJKLMNOPQRSTUVWXYZ`~-_'
     let res = ''
     const generatorfn = (value) => {
         for (let i = 0; i < value; i++) {
@@ -81,7 +81,7 @@ export const Generator = () => {
                 <span className="p-absolute right v-hidden"></span>
             </div>
             <div className="d-flex">
-                <button type="button" className="btn" onClick={check}>Generate</button>
+                <button type="button" className="btn" onClick={check} id="button">Generate</button>
             </div>
             <div className="generated w-100 text-center">
                 <input
