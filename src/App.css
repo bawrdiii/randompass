@@ -42,10 +42,14 @@ body {
     text-align: center;
 }
 
-.main h3 {
+h3 {
     color: #fafafa;
     letter-spacing: 2px;
 
+}
+
+.check-label {
+    cursor: pointer;
 }
 
 .d-flex {
@@ -146,11 +150,127 @@ body {
     align-items: center;
     margin-right: auto;
     margin-left: auto;
-    width: 70px;
+    width: 80px;
     height: 30px;
     color: #fafafa;
-    background-color: #111;
+    background-color: rgba(17, 17, 17, 0.893);
+    border-radius: 20px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.6);
+}
 
+.hint {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.bg-hint {
+    margin-top: 2.5em;
+    background-color: #e0e0e086;
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 5px rgba(204, 204, 204, 0.493);
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .5em .8em;
+    transition: all .4s linear;
+}
+
+.arrow {
+    cursor: pointer;
+    user-select: none;
+    color: #fafafa;
+    font-size: 1em;
+    margin: 0;
+}
+
+.ul-hint {
+    visibility: hidden;
+    opacity: 0;
+    list-style: none;
+    color: #fafafa;
+    padding: 0;
+    text-align: start;
+    transition: visibility .4s ease-out, opacity .2s ease-out;
+}
+
+.ul-hint-after {
+    visibility: visible;
+    opacity: 1;
+}
+
+.ul-hint li {
+    padding: .3em 0;
+    display: flex;
+    align-items: center;
+}
+
+.li-after {
+    position: relative;
+}
+
+.li-after::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background-color: #319a21;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 3.5px;
+    bottom: 8px;
+}
+
+.ul-hint li::before {
+    content: "";
+    background: transparent;
+    display: inline-block;
+    border: 1.3px solid;
+    margin-right: 1em;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.hint-p {
+    color: #fafafa;
+}
+
+.range {
+    margin-top: 2em;
+    border-radius: 10px;
+    height: 12px;
+    /* transition: all .5s linear; */
+}
+
+.range::-webkit-progress-bar {
+    background-color: #fafafa;
+    border-radius: 10px;
+}
+
+.range::-webkit-progress-value {
+    background-color: transparent;
+    border-radius: 10px;
+    transition: all .5s linear;
+
+}
+
+.weak::-webkit-progress-value {
+    background-color: red;
+}
+
+.mid::-webkit-progress-value {
+    background-color: rgb(236, 170, 49);
+}
+
+.mid-after::-webkit-progress-value {
+    background-color: rgb(199, 129, 0);
+}
+
+.strong::-webkit-progress-value {
+    background-color: rgb(0, 176, 0);
 }
 
 @media (max-width:299.4px) {
