@@ -1,11 +1,15 @@
 import { Generator } from "./components/generator"
 import './app.css'
+import { Checker } from "./components/checker"
 
 const App = () => {
 
 
     return (
-        <Generator />
+        <>
+            <Generator />
+            <Checker />
+        </>
     )
 }
 export default App
